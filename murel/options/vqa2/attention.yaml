@@ -1,10 +1,10 @@
 exp:
-  dir: logs/vqa2/attention
+  dir: /network/tmp1/sciclunm/logs/vqa2/attention
   resume: # last, best_[...], or empty (from scratch)
 dataset:
   import: murel.datasets.factory
   name: vqa2 # or vqa2vg
-  dir: data/vqa/vqa2
+  dir: /network/data1/vqa2/vqa2
   train_split: train
   eval_split: val # or test
   proc_split: train # or trainval (preprocessing split, must be equal to train_split)
@@ -14,7 +14,7 @@ dataset:
   minwcount: 0
   nlp: mcb
   samplingans: True
-  dir_rcnn: data/vqa/coco/extract_rcnn/2018-04-27_bottom-up-attention_fixed_36
+  dir_rcnn: /Tmp/sciclunm/2018-04-27_bottom-up-attention_fixed_36
   vg: False
   dir_vg: data/vqa/vgenome
   dir_rcnn_vg: data/vqa/vgenome/extract_rcnn/2018-04-27_bottom-up-attention_fixed_36
@@ -28,7 +28,7 @@ model:
       type: BayesianUniSkip
       dropout: 0.25
       fixed_emb: False
-      dir_st: data/skip-thoughts
+      dir_st: /network/tmp1/sciclunm/skip-thoughts
     self_q_att: True
     attention:
       fusion:
